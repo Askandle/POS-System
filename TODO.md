@@ -1,41 +1,19 @@
-# Task: Build Internet Cafe POS System
+# Task: Add Edit and Delete Functionality to Services
 
 ## Plan
-- [x] Step 1: Initialize Supabase and setup database schema (Completed)
-  - [x] Initialize Supabase
-  - [x] Create database tables (profiles, services, products, transactions, expenses)
-  - [x] Setup RLS policies
-  - [x] Insert initial service and product data
-- [x] Step 2: Setup design system and theme (Completed)
-  - [x] Update index.css with color variables
-  - [x] Configure tailwind.config.js
-- [x] Step 3: Create types and API layer (Completed)
-  - [x] Define TypeScript types
-  - [x] Create database API functions
-- [x] Step 4: Implement authentication (Completed)
-  - [x] Update AuthContext with login/logout
-  - [x] Configure RouteGuard
-  - [x] Create Login page
-- [x] Step 5: Create layout and routing (Completed)
-  - [x] Create MainLayout with sidebar
-  - [x] Update routes.tsx with all pages
-  - [x] Update App.tsx with providers
-- [x] Step 6: Build core pages (Completed)
-  - [x] Dashboard page
-  - [x] Services page
-  - [x] Products page
-  - [x] Checkout page
-  - [x] Transactions page
-  - [x] Expenses page
-  - [x] Admin page
-- [x] Step 7: Validation and testing (Completed)
-  - [x] Run lint and fix issues
-  - [x] Verify all features work
+- [x] Step 1: Review existing ServicesPage implementation
+- [x] Step 2: Import updateService and deleteService API functions
+- [x] Step 3: Add state management for edit and delete operations
+- [x] Step 4: Create edit dialog with pre-filled form
+- [x] Step 5: Create delete confirmation dialog
+- [x] Step 6: Add Edit and Delete buttons to service cards (admin only)
+- [x] Step 7: Implement edit and delete handlers
+- [x] Step 8: Run linter to verify code quality
 
 ## Notes
-- Using username + password authentication (no email verification)
-- First registered user becomes admin automatically
-- Admin can manage user roles and view all data
-- Staff can process transactions and manage daily operations
-- All features implemented successfully
-- Lint check passed with no errors
+- Edit and delete functionality is now available for admin users only
+- Edit dialog pre-fills with existing service data
+- Delete operation shows confirmation dialog before proceeding
+- Both operations show success/error toast notifications
+- Services list automatically refreshes after edit/delete operations
+- All code passes linter validation
