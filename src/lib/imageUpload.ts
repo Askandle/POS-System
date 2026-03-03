@@ -1,6 +1,6 @@
 import { supabase } from '@/db/supabase';
 
-const BUCKET_NAME = 'app-a016oktd7pxd_product_images';
+const BUCKET_NAME = 'app-a01l6cjlhwjl_product_images';
 const MAX_FILE_SIZE = 1048576; // 1MB
 
 interface CompressionResult {
