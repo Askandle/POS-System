@@ -65,10 +65,12 @@ export default function DashboardPage() {
         <Card className="border-l-4 border-l-success">
           <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
             <CardTitle className="text-sm font-medium">Today's Sales</CardTitle>
-            <DollarSign className="h-4 w-4 text-success" />
+            <span className="h-8 w-8 mb-2 text-success text-2xl font-bold">
+  ₵
+</span>
           </CardHeader>
           <CardContent>
-            <div className="text-2xl font-bold text-success">${stats?.todaySales.toFixed(2) || '0.00'}</div>
+            <div className="text-2xl font-bold text-success">₵{stats?.todaySales.toFixed(2) || '0.00'}</div>
             <p className="text-xs text-muted-foreground">Total revenue today</p>
           </CardContent>
         </Card>
@@ -90,7 +92,7 @@ export default function DashboardPage() {
             <TrendingDown className="h-4 w-4 text-success" />
           </CardHeader>
           <CardContent>
-            <div className="text-2xl font-bold text-success">${stats?.todayExpenses.toFixed(2) || '0.00'}</div>
+            <div className="text-2xl font-bold text-success">₵{stats?.todayExpenses.toFixed(2) || '0.00'}</div>
             <p className="text-xs text-muted-foreground">Spent today</p>
           </CardContent>
         </Card>
@@ -160,7 +162,9 @@ export default function DashboardPage() {
               href="/transactions"
               className="flex flex-col items-center justify-center p-6 border border-success/30 rounded-lg hover:bg-success/10 transition-colors"
             >
-              <DollarSign className="h-8 w-8 mb-2 text-success" />
+             <span className="h-8 w-8 mb-2 text-success text-2xl font-bold">
+  ₵
+</span>
               <span className="font-medium">View History</span>
             </a>
           </div>

@@ -138,7 +138,7 @@ export default function TransactionsPage() {
                       </TableCell>
                       <TableCell>{getPaymentMethodBadge(transaction.payment_method)}</TableCell>
                       <TableCell className="font-semibold">
-                        ${transaction.total_amount.toFixed(2)}
+                        ₵{transaction.total_amount.toFixed(2)}
                       </TableCell>
                       <TableCell>{getStatusBadge(transaction.status)}</TableCell>
                       <TableCell>
@@ -217,8 +217,8 @@ export default function TransactionsPage() {
                           <Badge variant="outline">{item.item_type}</Badge>
                         </TableCell>
                         <TableCell>{item.quantity}</TableCell>
-                        <TableCell>${item.unit_price.toFixed(2)}</TableCell>
-                        <TableCell>${item.subtotal.toFixed(2)}</TableCell>
+                        <TableCell>₵{item.unit_price.toFixed(2)}</TableCell>
+                        <TableCell>₵{item.subtotal.toFixed(2)}</TableCell>
                       </TableRow>
                     ))}
                   </TableBody>
@@ -228,7 +228,7 @@ export default function TransactionsPage() {
               <div className="flex justify-between items-center pt-4 border-t">
                 <span className="text-lg font-semibold">Total</span>
                 <span className="text-2xl font-bold">
-                  ${selectedTransaction.total_amount.toFixed(2)}
+                  ₵{selectedTransaction.total_amount.toFixed(2)}
                 </span>
               </div>
             </div>

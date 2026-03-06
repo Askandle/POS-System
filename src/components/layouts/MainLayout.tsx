@@ -94,7 +94,7 @@ export default function MainLayout({ children }: MainLayoutProps) {
               <div className="flex h-full flex-col bg-sidebar">
                 <div className="flex h-16 items-center gap-2 border-b border-sidebar-border px-4">
                   <Store className="h-6 w-6 text-sidebar-primary" />
-                  <span className="font-bold text-sidebar-foreground">Cafe POS</span>
+                  <span className="font-bold text-sidebar-foreground">S.S.T POS SYSTEM</span>
                 </div>
                 <div className="flex-1 overflow-auto p-4">
                   <NavLinks mobile />
@@ -106,7 +106,7 @@ export default function MainLayout({ children }: MainLayoutProps) {
           {/* Logo */}
           <div className="flex items-center gap-2">
             <Store className="h-6 w-6 text-primary" />
-            <span className="font-bold text-lg hidden sm:inline-block">Internet Cafe POS</span>
+            <span className="font-bold text-lg hidden sm:inline-block">SANYALI SCHOOL OF TECHNOLOGY POS SYSTEM</span>
           </div>
 
           {/* Spacer */}

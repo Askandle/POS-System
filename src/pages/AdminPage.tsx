@@ -208,7 +208,7 @@ export default function AdminPage() {
         <CardContent className="space-y-2">
           <div className="flex justify-between py-2 border-b">
             <span className="text-muted-foreground">Application</span>
-            <span className="font-medium">Internet Cafe POS System</span>
+            <span className="font-medium">S.S.T POS System</span>
           </div>
           <div className="flex justify-between py-2 border-b">
             <span className="text-muted-foreground">Version</span>

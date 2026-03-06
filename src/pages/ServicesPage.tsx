@@ -335,7 +335,7 @@ export default function ServicesPage() {
             <CardHeader>
               <CardTitle className="flex items-center justify-between">
                 <span>{service.name}</span>
-                <Badge className="bg-primary text-primary-foreground hover:bg-primary/90">${service.base_price.toFixed(2)}</Badge>
+                <Badge className="bg-primary text-primary-foreground hover:bg-primary/90">₵{service.base_price.toFixed(2)}</Badge>
               </CardTitle>
               <CardDescription>{service.description || service.unit}</CardDescription>
             </CardHeader>
@@ -368,7 +368,7 @@ export default function ServicesPage() {
               </div>
               {(quantities[service.id] || 0) > 0 && (
                 <p className="text-sm text-primary font-semibold text-center">
-                  Subtotal: ${((quantities[service.id] || 0) * service.base_price).toFixed(2)}
+                  Subtotal: ₵{((quantities[service.id] || 0) * service.base_price).toFixed(2)}
                 </p>
               )}
               {profile?.role === 'admin' && (

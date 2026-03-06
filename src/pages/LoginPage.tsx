@@ -8,7 +8,6 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/com
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import { toast } from 'sonner';
 import { Loader2, Store } from 'lucide-react';
-
 export default function LoginPage() {
   const [isLoading, setIsLoading] = useState(false);
   const [loginUsername, setLoginUsername] = useState('');
@@ -94,7 +93,7 @@ export default function LoginPage() {
               <Store className="h-8 w-8 text-primary-foreground" />
             </div>
           </div>
-          <CardTitle className="text-2xl font-bold">Internet Cafe POS</CardTitle>
+          <CardTitle className="text-2xl font-bold">S.S.T POS SYSTEM</CardTitle>
           <CardDescription>Sign in to access the system</CardDescription>
         </CardHeader>
         <CardContent>

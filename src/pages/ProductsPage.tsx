@@ -374,7 +374,7 @@ export default function ProductsPage() {
                     </div>
 
                     <div className="space-y-2">
-                      <Label htmlFor="price">Price ($) *</Label>
+                      <Label htmlFor="price">Price (₵) *</Label>
                       <Input
                         id="price"
                         type="number"
@@ -452,7 +452,7 @@ export default function ProductsPage() {
                 <CardHeader>
                   <CardTitle className="flex items-center justify-between">
                     <span className="text-base">{product.name}</span>
-                    <Badge className="bg-success text-success-foreground hover:bg-success/90">${product.price.toFixed(2)}</Badge>
+                    <Badge className="bg-success text-success-foreground hover:bg-success/90">₵{product.price.toFixed(2)}</Badge>
                   </CardTitle>
                   <CardDescription>
                     {product.description}
@@ -521,7 +521,7 @@ export default function ProductsPage() {
                       </div>
                       {(quantities[product.id] || 0) > 0 && (
                         <p className="text-sm text-success font-semibold text-center">
-                          Subtotal: ${((quantities[product.id] || 0) * product.price).toFixed(2)}
+                          Subtotal: ₵{((quantities[product.id] || 0) * product.price).toFixed(2)}
                         </p>
                       )}
                     </>

@@ -163,7 +163,7 @@ export default function CheckoutPage() {
                       <Badge variant="outline">{item.type}</Badge>
                     </div>
                     <p className="text-sm text-muted-foreground">
-                      ${item.price.toFixed(2)} {item.unit && `/ ${item.unit}`}
+                      ₵{item.price.toFixed(2)} {item.unit && `/ ${item.unit}`}
                     </p>
                     {item.type === 'product' && item.stock !== undefined && (
                       <p className="text-xs text-muted-foreground">Stock: {item.stock}</p>
@@ -179,7 +179,7 @@ export default function CheckoutPage() {
                       className="w-20 text-center"
                     />
                     <span className="text-sm font-medium w-20 text-right">
-                      ${(item.price * item.quantity).toFixed(2)}
+                      ₵{(item.price * item.quantity).toFixed(2)}
                     </span>
                     <Button
                       variant="ghost"
@@ -235,7 +235,7 @@ export default function CheckoutPage() {
                 </div>
                 <div className="flex justify-between text-lg font-bold">
                   <span>Total</span>
-                  <span>${calculateTotal().toFixed(2)}</span>
+                  <span>₵{calculateTotal().toFixed(2)}</span>
                 </div>
               </div>
 

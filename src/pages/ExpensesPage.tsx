@@ -277,7 +277,7 @@ export default function ExpensesPage() {
           <CardTitle className="flex items-center justify-between">
             <span>Expense Records</span>
             <div className="text-2xl font-bold text-destructive">
-              ${calculateTotal().toFixed(2)}
+              ₵{calculateTotal().toFixed(2)}
             </div>
           </CardTitle>
         </CardHeader>
@@ -319,7 +319,7 @@ export default function ExpensesPage() {
                       </TableCell>
                       <TableCell>{expense.staff?.username || 'N/A'}</TableCell>
                       <TableCell className="font-semibold text-destructive">
-                        ${expense.amount.toFixed(2)}
+                        ₵{expense.amount.toFixed(2)}
                       </TableCell>
                       {profile?.role === 'admin' && (
                         <TableCell>
