@@ -6,7 +6,7 @@ interface RouteGuardProps {
   children: React.ReactNode;
 }
 
-// Please add the pages that can be accessed without logging in to PUBLIC_ROUTES.
+// Pages accessible without logging in
 const PUBLIC_ROUTES = ['/login', '/403', '/404'];
 
 function matchPublicRoute(path: string, patterns: string[]) {
@@ -25,6 +25,10 @@ export function RouteGuard({ children }: RouteGuardProps) {
   const location = useLocation();
 
   useEffect(() => {
+    // Wait until the auth state is fully resolved before making any redirect decision.
+    // Without this guard, the app would redirect to /login on every page load for a
+    // brief moment while the session is being fetched from Supabase, which looks like
+    // being "logged out".
     if (loading) return;
 
     const isPublic = matchPublicRoute(location.pathname, PUBLIC_ROUTES);
@@ -34,6 +38,8 @@ export function RouteGuard({ children }: RouteGuardProps) {
     }
   }, [user, loading, location.pathname, navigate]);
 
+  // Show a spinner while we're figuring out if the user is authenticated.
+  // This prevents the flash of the login page on refresh.
   if (loading) {
     return (
       <div className="flex items-center justify-center min-h-screen">
